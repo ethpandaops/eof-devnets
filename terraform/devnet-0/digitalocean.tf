@@ -3,7 +3,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 variable "digitalocean_project_name" {
   type    = string
-  default = "Template"
+  default = "eof-devnets"
 }
 
 variable "digitalocean_ssh_key_name" {
@@ -62,7 +62,7 @@ locals {
 
 locals {
   digitalocean_default_region = "ams3"
-  digitalocean_default_size   = "c-2"
+  digitalocean_default_size   = "s-4vcpu-8gb-240gb-intel"
   digitalocean_default_image  = "debian-12-x64"
   digitalocean_global_tags = [
     "Owner:Devops",

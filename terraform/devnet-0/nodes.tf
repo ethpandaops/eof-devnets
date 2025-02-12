@@ -12,9 +12,9 @@ variable "bootnode" {
 variable "lighthouse_geth" {
   default = {
     name            = "lighthouse-geth"
-    count           = 1
+    count           = 0
     validator_start = 0
-    validator_end   = 100
+    validator_end   = 0
   }
 }
 
@@ -76,27 +76,27 @@ variable "lighthouse_nimbusel" {
 variable "prysm_geth" {
   default = {
     name            = "prysm-geth"
-    count           = 0
+    count           = 2
     validator_start = 0
-    validator_end   = 0
+    validator_end   = 200
   }
 }
 
 variable "prysm_besu" {
   default = {
     name            = "prysm-besu"
-    count           = 0
-    validator_start = 0
-    validator_end   = 0
+    count           = 2
+    validator_start = 200
+    validator_end   = 400
   }
 }
 
 variable "prysm_nethermind" {
   default = {
     name            = "prysm-nethermind"
-    count           = 0
-    validator_start = 0
-    validator_end   = 0
+    count           = 1
+    validator_start = 400
+    validator_end   = 500
   }
 }
 
@@ -121,9 +121,9 @@ variable "prysm_erigon" {
 variable "prysm_reth" {
   default = {
     name            = "prysm-reth"
-    count           = 0
-    validator_start = 0
-    validator_end   = 0
+    count           = 2
+    validator_start = 500
+    validator_end   = 700
   }
 }
 

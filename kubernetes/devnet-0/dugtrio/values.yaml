@@ -1,0 +1,49 @@
+# Ansible managed. Don't change this file manually. Template info: /vendor/collections/ansible_collections/ethpandaops/general/roles/generate_kubernetes_config/templates/dugtrio.yaml.j2
+
+dugtrio:
+  fullnameOverride: dugtrio
+  image:
+    repository: docker.ethquokkaops.io/dh/ethpandaops/dugtrio
+    tag: latest
+    pullPolicy: Always
+  resources:
+    requests:
+      cpu: 100m
+      memory: 200Mi
+    limits:
+      cpu: 500m
+      memory: 1Gi
+  ingress:
+    enabled: true
+    className: ingress-nginx-public
+    hosts:
+      - host: beacon.eof-devnet-0.ethpandaops.io
+        paths:
+          - path: /
+            pathType: Prefix
+
+  dugtrioFrontendTitle: "Dugtrio: eof-devnet-0"
+  dugtrioProxyCount: 2
+  dugtrioProxyBlockedPaths:
+    - "^/teku/v[0-9]+/admin/.*"
+
+  endpoints:
+  # Rpc
+  - url: http://prysm-geth-001:5052
+    name: rpc-prysm-geth-001
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.eof-devnets.node_ingress.combined}>@bn.bootnode-1.eof-devnet-0.ethpandaops.io
+    name: bootnode-1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.eof-devnets.node_ingress.combined}>@bn.prysm-besu-1.eof-devnet-0.ethpandaops.io
+    name: prysm-besu-1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.eof-devnets.node_ingress.combined}>@bn.prysm-besu-2.eof-devnet-0.ethpandaops.io
+    name: prysm-besu-2
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.eof-devnets.node_ingress.combined}>@bn.prysm-geth-1.eof-devnet-0.ethpandaops.io
+    name: prysm-geth-1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.eof-devnets.node_ingress.combined}>@bn.prysm-geth-2.eof-devnet-0.ethpandaops.io
+    name: prysm-geth-2
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.eof-devnets.node_ingress.combined}>@bn.prysm-nethermind-1.eof-devnet-0.ethpandaops.io
+    name: prysm-nethermind-1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.eof-devnets.node_ingress.combined}>@bn.prysm-reth-1.eof-devnet-0.ethpandaops.io
+    name: prysm-reth-1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.eof-devnets.node_ingress.combined}>@bn.prysm-reth-2.eof-devnet-0.ethpandaops.io
+    name: prysm-reth-2
