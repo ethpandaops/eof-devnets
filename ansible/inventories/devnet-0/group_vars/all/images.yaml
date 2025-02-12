@@ -4,7 +4,7 @@ default_ethereum_client_images:
   prysm_validator: docker.ethquokkaops.io/dh/ethpandaops/prysm-validator:develop-557c5be
 ### Execution layer clients
   besu: docker.ethquokkaops.io/dh/ethpandaops/besu:main-af842eb
-  geth: docker.ethquokkaops.io/dh/ethpandaops/geth:osaka-mega-eof-9abb554
+  geth: docker.ethquokkaops.io/dh/ethpandaops/geth:osaka-mega-eof-82db28a
   erigon: docker.ethquokkaops.io/dh/erigontech/erigon:main-latest
   ethereumjs: docker.ethquokkaops.io/dh/ethpandaops/ethereumjs:master
   nethermind: docker.ethquokkaops.io/dh/ethpandaops/nethermind:feature-evm-eof-e1e375c
