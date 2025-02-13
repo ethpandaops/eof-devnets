@@ -1,0 +1,3 @@
+
+# role: ethpandaops.general.geth
+geth_container_image: "{{ default_ethereum_client_images.geth_marius }}"
