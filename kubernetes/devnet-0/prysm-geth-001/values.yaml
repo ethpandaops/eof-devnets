@@ -10,7 +10,7 @@ prysm-geth-001:
     checkpointSync:
       enabled: false
       addresses:
-        eof-devnet-0: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.dencun-devnets.node_ingress.combined}>@bn.bootnode-1.eof-devnet-0.ethpandaops.io
+        eof-devnet-0: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.eof-devnets.node_ingress.combined}>@bn.bootnode-1.eof-devnet-0.ethpandaops.io
     clientArgs:
       networks:
         eof-devnet-0:
