@@ -76,7 +76,7 @@ prysm-geth-001:
               - --verbosity=debug
               - --subscribe-all-subnets
               - --bootstrap-node=enr:-Iq4QBjg4Nkisiz9t_cdjocpwmfmCd29shS3DEghWUnEUrTBSALCfrCpFHI2ikwc_56zW2dqSlDydeM10X7DqETH5SeGAZT5q0HEgmlkgnY0gmlwhES3em6Jc2VjcDI1NmsxoQJJ3h8aUO3GJHv-bdvHtsQZ2OEisutelYfGjXO4lSg8BYN1ZHCCIzI
-              - --bootstrap-node=enr:-Mq4QAMZB1mJvb5N-FH5pyGl3Sm8XW8suDdpfWR8ztc6fIYHZSJhSw4duB8QQlB7flgMRDs8xTA5--MINLdnfpWQFOqGAZT5q-nuh2F0dG5ldHOIAAAAGAAAAACEZXRoMpCLk48_YJBFAQEAAAAAAAAAgmlkgnY0gmlwhES3em6EcXVpY4IyyIlzZWNwMjU2azGhAr1ITgNvpk8qx4ULDsyOAhBYfuyKD6o8AciNxjEp65Q7iHN5bmNuZXRzAIN0Y3CCIyiDdWRwgiMo
+              - --bootstrap-node=enr:-Mq4QPuRBN_tmDJ9rMCeB12PGmHkDz9V8Hd_SKcXJzSuh_QEZhTEg-9DxfNCRtN93BjK1z4CxI5xIjLXpLF7F_oPRqWGAZT5q-nzh2F0dG5ldHOIAMAAAAAAAACEZXRoMpBfvOn4cJBFAf__________gmlkgnY0gmlwhES3em6EcXVpY4IyyIlzZWNwMjU2azGhAr1ITgNvpk8qx4ULDsyOAhBYfuyKD6o8AciNxjEp65Q7iHN5bmNuZXRzAIN0Y3CCIyiDdWRwgiMo
             lighthouse:
             nimbus:
 
@@ -86,7 +86,7 @@ prysm-geth-001:
     fullnameOverride: geth-prysm-001
     image:
       repository: docker.ethquokkaops.io/dh/ethpandaops/geth
-      tag: osaka-mega-eof-9abb554
+      tag: osaka-mega-eof-82db28a
       pullPolicy: Always
     p2pNodePort:
       enabled: true
@@ -143,7 +143,7 @@ prysm-geth-001:
           - name: storage
             mountPath: "/data"
       - name: init-genesis
-        image: docker.ethquokkaops.io/dh/ethpandaops/geth:osaka-mega-eof-9abb554
+        image: docker.ethquokkaops.io/dh/ethpandaops/geth:osaka-mega-eof-82db28a
         imagePullPolicy: Always
         securityContext:
           runAsNonRoot: false
