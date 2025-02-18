@@ -11,7 +11,7 @@ panda-pulse:
 
   config:
     network: "eof-devnet-0"
-    discordChannel: "1336250914461450300"
+    discordChannel: "1340943817653616742" # EthR&D: #eof-devnet-alerts
     ethereumCls:
       - lighthouse
       - lodestar
