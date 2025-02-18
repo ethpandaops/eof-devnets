@@ -9,7 +9,7 @@ default_ethereum_client_images:
   erigon: docker.ethquokkaops.io/dh/erigontech/erigon:main-latest
   ethereumjs: docker.ethquokkaops.io/dh/ethpandaops/ethereumjs:master
   nethermind: docker.ethquokkaops.io/dh/ethpandaops/nethermind:feature-evm-eof-0258716
-  reth: docker.ethquokkaops.io/dh/ethpandaops/reth:main-771a99b
+  reth: docker.ethquokkaops.io/dh/ethpandaops/reth:main-42f8223
 
 
 default_tooling_images:
