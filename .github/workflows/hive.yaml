@@ -31,7 +31,7 @@ on:
         description: GitHub repository and tag for reth (repo@tag)
       nethermind_version:
         type: string
-        default: NethermindEth/nethermind@feature-evm-eof
+        default: NethermindEth/nethermind@feature/evm/eof
         description: GitHub repository and tag for nethermind (repo@tag)
       erigon_version:
         type: string
@@ -106,7 +106,7 @@ jobs:
           GETH_DEFAULT="ethereum/go-ethereum@eof-devnet-0"
           BESU_DEFAULT="hyperledger/besu@main"
           RETH_DEFAULT="paradigmxyz/reth@main"
-          NETHERMIND_DEFAULT="NethermindEth/nethermind@feature-evm-eof"
+          NETHERMIND_DEFAULT="NethermindEth/nethermind@feature/evm/eof"
           ERIGON_DEFAULT="erigontech/erigon@eof-tests"
           ETHEREUMJS_DEFAULT="spencer-tb/ethereumjs-monorepo@osaka-hive-engine-fix"
           HIVE_DEFAULT="ethereum/hive@master"
