@@ -50,12 +50,12 @@ env:
   S3_PATH: eof-devnet-0
   S3_PUBLIC_URL: https://hive.ethpandaops.io/eof-devnet-0
   INSTALL_RCLONE_VERSION: v1.68.2
-  EEST_BUILD_ARG_FIXTURES: eip7692@latest
+  EEST_BUILD_ARG_FIXTURES: https://github.com/ethereum/execution-spec-tests/releases/download/v4.1.0/fixtures_eip7692.tar.gz
   EEST_BUILD_ARG_BRANCH: chore-osaka-ruleset
   # Flags used for all simulators
   GLOBAL_EXTRA_FLAGS: >-
     --client.checktimelimit=180s
-    --sim.parallelism=6
+    --sim.parallelism=8
     --docker.buildoutput
   # Flags used for the ethereum/eest/consume-engine simulator
   EEST_ENGINE_FLAGS: >-
@@ -198,7 +198,7 @@ jobs:
           EOF
 
   test:
-    timeout-minutes: 720 # 12 hours
+    timeout-minutes: 1200 # 20 hours
     needs: prepare
     runs-on: >-
       ${{
