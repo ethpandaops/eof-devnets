@@ -15,7 +15,7 @@ on:
         description: Comma-separated list of simulators to test ethereum/eest/consume-engine, ethereum/eest/consume-rlp
       hive_version:
         type: string
-        default: ethereum/hive@master
+        default: spencer-tb/hive@hive-osaka-eof
         description: GitHub repository and tag for hive (repo@tag)
       geth_version:
         type: string
@@ -39,7 +39,7 @@ on:
         description: GitHub repository and tag for erigon (repo@tag)
       ethereumjs_version:
         type: string
-        default: spencer-tb/ethereumjs-monorepo@osaka-hive-engine-fix
+        default: ethereum/ethereumjs-monorepo@master
         description: GitHub repository and tag for ethereumjs (repo@tag)
 
 env:
@@ -108,8 +108,8 @@ jobs:
           RETH_DEFAULT="paradigmxyz/reth@main"
           NETHERMIND_DEFAULT="NethermindEth/nethermind@feature/evm/eof"
           ERIGON_DEFAULT="erigontech/erigon@eof-tests"
-          ETHEREUMJS_DEFAULT="spencer-tb/ethereumjs-monorepo@osaka-hive-engine-fix"
-          HIVE_DEFAULT="ethereum/hive@master"
+          ETHEREUMJS_DEFAULT="ethereum/ethereumjs-monorepo@master"
+          HIVE_DEFAULT="spencer-tb/hive@hive-osaka-eof"
 
           # Parse geth
           echo "geth_repo=$(echo ${GETH_VERSION:-$GETH_DEFAULT} | cut -d@ -f1)" >> $GITHUB_OUTPUT
