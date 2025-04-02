@@ -39,7 +39,7 @@ on:
         description: GitHub repository and tag for erigon (repo@tag)
       ethereumjs_version:
         type: string
-        default: ethereum/ethereumjs-monorepo@master
+        default: ethereumjs/ethereumjs-monorepo@master
         description: GitHub repository and tag for ethereumjs (repo@tag)
 
 env:
@@ -108,7 +108,7 @@ jobs:
           RETH_DEFAULT="paradigmxyz/reth@main"
           NETHERMIND_DEFAULT="NethermindEth/nethermind@feature/evm/eof"
           ERIGON_DEFAULT="erigontech/erigon@eof-tests"
-          ETHEREUMJS_DEFAULT="ethereum/ethereumjs-monorepo@master"
+          ETHEREUMJS_DEFAULT="ethereumjs/ethereumjs-monorepo@master"
           HIVE_DEFAULT="spencer-tb/hive@hive-osaka-eof"
 
           # Parse geth
