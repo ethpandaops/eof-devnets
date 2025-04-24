@@ -7,7 +7,8 @@ on:
     inputs:
       client:
         type: string
-        default: '"go-ethereum","reth","nethermind","ethereumjs","besu","erigon"'
+        # default: '"go-ethereum","reth","nethermind","ethereumjs","besu","erigon"'
+        default: '"go-ethereum","besu",
         description: Comma-separated list of clients to test .e.g go-ethereum, besu, reth, nethermind, erigon, ethereumjs
       simulator:
         type: string
@@ -19,11 +20,11 @@ on:
         description: GitHub repository and tag for hive (repo@tag)
       geth_version:
         type: string
-        default: ethereum/go-ethereum@eof-devnet-0
+        default: MariusVanDerWijden/go-ethereum@eof-devnet-1
         description: GitHub repository and tag for go-ethereum (repo@tag)
       besu_version:
         type: string
-        default: hyperledger/besu@main
+        default: shemnon/besu@eof-devnet-1
         description: GitHub repository and tag for besu (repo@tag)
       reth_version:
         type: string
@@ -47,10 +48,10 @@ env:
   GOPROXY: "${{ vars.GOPROXY }}"
   # Hive action environment variables
   S3_BUCKET: hive-results
-  S3_PATH: eof-devnet-0
-  S3_PUBLIC_URL: https://hive.ethpandaops.io/eof-devnet-0
+  S3_PATH: eof-devnet-1
+  S3_PUBLIC_URL: https://hive.ethpandaops.io/eof-devnet-1
   INSTALL_RCLONE_VERSION: v1.68.2
-  EEST_BUILD_ARG_FIXTURES: https://github.com/ethereum/execution-spec-tests/releases/download/v4.1.0/fixtures_eip7692.tar.gz
+  EEST_BUILD_ARG_FIXTURES: https://github.com/ethereum/execution-spec-tests/releases/download/v4.3.0/fixtures_eip7692.tar.gz
   EEST_BUILD_ARG_BRANCH: main
   # Flags used for all simulators
   GLOBAL_EXTRA_FLAGS: >-
